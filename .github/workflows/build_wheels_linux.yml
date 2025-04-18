@@ -69,7 +69,7 @@ jobs:
     - name: Saving all wheels
       uses: actions/upload-artifact@v4
       with:
-        name: wheels
+        name: wheels-${{ github.run_id }}
         path: wheelhouse/opencv*.whl
         overwrite: true
     - name: Saving a wheel accordingly to matrix
@@ -183,7 +183,7 @@ jobs:
     - name: saving artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: wheels
+        name: wheels-${{ github.run_id }}
         path: dist/opencv*.tar.gz
         overwrite: true
 
