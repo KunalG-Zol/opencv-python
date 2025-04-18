@@ -183,7 +183,7 @@ jobs:
       with:
         name: wheels
         path: dist/opencv*.tar.gz
-        overwrite: true
+        overwrite: 'true'
 
   Release_rolling:
     if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
